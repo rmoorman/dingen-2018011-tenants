@@ -7,7 +7,7 @@ defmodule Dingen do
   if it comes from the database, an external API or others.
   """
 
-  import Ecto.Query
+  import Ecto.Query, warn: false
 
   alias Dingen.Repo
   alias Dingen.Tenant
