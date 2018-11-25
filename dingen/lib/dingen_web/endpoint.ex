@@ -42,5 +42,7 @@ defmodule DingenWeb.Endpoint do
     key: "_dingen_key",
     signing_salt: "G9VV+hAH"
 
+  plug DingenWeb.TenantLookupPlug
+
   plug DingenWeb.Router
 end
