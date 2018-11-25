@@ -1,8 +1,10 @@
-defmodule DingenWeb.TenantLookupPlug do
+defmodule DingenWeb.Tenant.LookupPlug do
   import Plug.Conn
   alias Plug.Conn
 
   alias Dingen.Tenant
+
+  @private_field :dingen_tenant
 
   ###
   ### Plug interface
@@ -20,8 +22,6 @@ defmodule DingenWeb.TenantLookupPlug do
   ###
   ###
   ###
-
-  @private_field :dingen_tenant
 
   def put_tenant(%Conn{} = conn, tenant) do
     put_private(conn, @private_field, tenant)
